@@ -10,6 +10,7 @@ public class Game {
 	}
 
 	public int move(char player) {
+		// find a cell that can win
 		for (int i = 0; i < 9; i++) {
 			if (board.charAt(i) == '-') {
 				Game game = play(i, player);
@@ -18,6 +19,7 @@ public class Game {
 			}
 		}
 
+		// find an empty cell
 		for (int i = 0; i < 9; i++) {
 			if (board.charAt(i) == '-') 
 				return i;
